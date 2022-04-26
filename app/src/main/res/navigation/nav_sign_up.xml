@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_sign_up"
+    app:startDestination="@id/fullNameFragment">
+
+    <fragment
+        android:id="@+id/fullNameFragment"
+        android:name="com.example.vlmk_19dh110394.FullNameFragment"
+        android:label="@string/text_fullname"
+        tools:layout="@layout/fragment_full_name">
+        <action
+            android:id="@+id/action_fullNameFragment_to_adressFragment"
+            app:destination="@id/adressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adressFragment"
+        android:name="com.example.vlmk_19dh110394.AdressFragment"
+        android:label="@string/text_address"
+        tools:layout="@layout/fragment_adress">
+        <action
+            android:id="@+id/action_adressFragment_to_usernamePasswordFragment"
+            app:destination="@id/usernamePasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usernamePasswordFragment"
+        android:name="com.example.vlmk_19dh110394.UsernamePasswordFragment"
+        android:label="@string/text_email"
+        tools:layout="@layout/fragment_username_password" />
+</navigation>
